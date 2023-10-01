@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 34px;
+  margin-bottom: 120px;
+
+  background-color: var(--bg-color);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    margin-right: 174px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    padding: 10px;
+  }
+}

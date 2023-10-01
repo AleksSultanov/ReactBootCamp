@@ -1,0 +1,78 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title> Комманды Conda </title>
+  <body> 
+     Вывод версии <br>
+<code>conda info</code><br>
+     Обновите метапакет анаконды (anaconda) <br>
+<code>conda update anaconda</code><br>
+     Получить список всех моих окружений. Активная среда показана с *<br>
+<code>conda info envs</code><br>
+<code>conda info -e</code><br>
+     Создать среду(Myenv) и установить программу (ы) <br>
+<code>conda create      name Myenv biopython </code><br>
+<code>conda create -n Myenv biopython</code><br>
+<code>conda create -n Myenv python=3.7</code><br>
+     Активируйте новую среду, чтобы использовать ее <br>
+<code>conda activate Myenv</code><br>
+     Дезактивировать окружающую среду <br>
+<code>conda deactivate</code><br>
+     Создайте новую среду, укажите версию Python <br>
+<code>conda create -n Myenv python=3.4 astroid</code><br>
+     Сделать точную копию окружения <br>
+<code>conda create -n flowers      clone snowflakes </code><br>
+     Удалить среду<br>
+<code>conda remove -n flowers      all</code><br>
+     Сохранить текущую среду в файл<br>
+<code>conda env export > puppies.yml</code><br>
+     Загрузить среду из файла<br>
+<code>conda env create -f puppies.yml</code><br>
+<br>
+<hr>
+     <h3>Python</h3>
+     Проверьте версии Python, доступные для установки<br>
+<code>conda search      full-name python<br>
+       conda search -f python</code><br>
+     Установите другую версию Python в новой среде<br>
+<code>conda create -n snakes python=3.4<br>
+
+     <h3>Управление конфигурацией .condarc</h3>
+     Получить все ключи и значения из моего файла .condarc<br>
+     <code>conda config    get</code><br>
+     Получить значение ключевых каналов из файла .condarc<br>
+     <code>conda config      get channels</code><br>
+     Добавьте новое значение в каналы, чтобы conda искала пакеты в этом месте<br>
+     <code>conda config   add channels pandas</code><br>
+
+     Управление пакетами (Packages), включая Python<br>
+     Просмотр списка пакетов и версий, установленных в активной среде<br>
+<code>conda list</code><br>
+     Найдите пакет, чтобы узнать, доступен ли он для установки conda.<br>
+<code>conda search beautiful-soup</code><br>
+     Установите новый пакет. ПРИМЕЧАНИЕ. Если вы не укажете имя среды, оно будет установлено в текущей активной среде.<br>
+<code>conda install -n bunnies beautiful-soup</code><br>
+     Обновить пакет в текущей среде<br>
+<code>conda update beautiful-soup</code><br>
+     Поиск пакета в определенном месте (канал pandas на Anaconda.org)<br>
+<code>conda search      override-channels -c pandas bottleneck</code><br>
+     Установить пакет из определенного канала<br>
+<code>conda install -c pandas bottleneck</code><br>
+     Найдите пакет, чтобы узнать, доступен ли он в репозитории Anaconda.<br>
+<code>conda search      override-channels -c defaults beautiful-soup</code><br>
+     Установить коммерческие пакеты Continuum<br>
+<code>conda install iopro accelerate</code><br>
+     Создайте пакет Conda из пакета Python Index Index (PyPi)<br>
+<code>conda skeleton pypi pyinstrument</code><br>
+<code>conda build pyinstrument</code><br>
+<hr>
+<h3>Удаление Пакетов (Packages) или Сред (Environments)</h3>
+     Удалить один пакет из любой именованной среды<br>
+<code>conda remove      name bunnies beautiful-soup</code><br>
+     Удалить один пакет из активной среды<br>
+<code>conda remove beautiful-soup</code><br>
+     Удалить несколько пакетов из любой среды<br>
+<code>conda remove      name bunnies beautiful-soup astroid</code><br>
+     Удалить среду<br>
+<code>conda remove      name snakes      all</code><br>
+  </body>
+</html>

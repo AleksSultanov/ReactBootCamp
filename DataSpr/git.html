@@ -1,0 +1,44 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <body> 
+<title> Шпаргалка по git  </title>
+
+<p> установка </p>
+<pre> 
+   sudo apt install git-all
+</pre>
+
+<p> Задать начальный конфиг</p>
+<pre> 
+  git config --global user.name "Aleks Sultanov"
+  git config --global user.email aesultanov@yandex.ru
+<pre>
+
+<p> Добавление и выгрузка</p>
+<pre> 
+  создать репозитарий
+  git init  
+  
+  Добавить файлы из тек.каталога
+  git add .
+  
+  узнать статус 
+  git status
+  
+  фиксация
+  git commit -m "Initial commit"
+  
+  выгрузка в хранилище
+  git remote add origin https://gitlab.com/AleksSultanov/lessonflask.git
+  git push --set-upstream origin master
+  надо перейти по ссылке и подтвердить
+  
+  
+  выгрузить и переключить ветку
+  git clone https://gitlab.com/AleksSultanov/userapy.git
+  git checkout master
+  
+<pre>
+
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <body> 
+<title> Шпаргалка по docker  </title>
+<pre>
+# сборка образа
+  docker build -t my_image .  
+# - запуск
+  docker run my_image  
+
+# просмотр списка образов
+ docker image ls
+# просмотр запущенных контейнеров
+  #активные 
+  docker ps
+  #все 
+  docker ps -a
+  #последний созданный
+  docker ps -l
+# просмотр контейнеров
+  docker container ls 
+
+# -удалить запущенный контейнер (из docker ps - a)
+  docker rm 1e482e46f4a5  
+
+#-удалить запущенный образ (по списку из docker image ls)
+ docker rmi 1e482e46f4a5  
+
+# --запуск в фоне
+ docker run -d my_image
+ 
+ #запуск остановленного контейнера
+ docker start
+ #остановить запущенный контейнер
+ docker stop
+
+# запуск через компос
+ docker-compose up 
+# запуск в фоне
+ docker-compose up -d
+#Остановить 
+ docker-compose stop
+#Убить
+ docker-compose down
+ 
+#удалить все  
+ docker rm -f $(docker ps -a -q)
+ docker rmi $(docker images -q)
+#просмотреть сети контейнера
+ docker network inspect pg_default
+
+#многоконтейнерное развертывание
+docker-compose up -d --scale app=2
+docker-compose up --build -d --scale app=2
+
+docker swarm init
+#просмотр контейнеров
+docker node ls
+
+ 
+ 
+</pre>
+
+  </body>
+</html>

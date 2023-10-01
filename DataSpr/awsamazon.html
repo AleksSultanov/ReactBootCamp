@@ -1,0 +1,104 @@
+﻿<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <body> 
+<title> Шпаргалка aws.amazon  </title>
+
+<p> Подключение. Создание инстанциии </p>
+<pre> 
+   Создать папку mkdir aws
+   Скачать образ ubuntu.pem
+   Выполнить chmod 400 ubuntu.pem
+   Выполнить подключение
+    ssh -i "ubuntu.pem" ubuntu@ec2-3-144-179-217.us-east-2.compute.amazonaws.com
+	
+   пример с сайта	
+</pre>
+
+<p> Установка docker </p>
+<pre> 
+  https://labs.play-with-docker.com/
+  https://docs.docker.com/engine/install/ubuntu/
+  https://docs.docker.com/engine/install/linux-postinstall/
+  https://docs.docker.com/compose/install/
+
+</pre>
+
+
+<p> Установка runner </p>
+<pre> 
+  https://docs.gitlab.com/runner/install/linux-manually.html
+  dpkg --print-architecture
+
+  curl -LJO "https://gitlab-runner-downloads.s3.amazonaws.com/latest/deb/gitlab-runner_${arch}.deb"
+  <code>curl -LJO "https://gitlab-runner-downloads.s3.amazonaws.com/latest/deb/gitlab-runner_amd64.deb"</code>
+
+  dpkg -i gitlab-runner_<arch>.deb
+  <code>dpkg -i gitlab-runner_amd64.deb</code>
+
+  Проверка установки
+  gitlab-runner -v
+
+  sudo usermod -aG docker gitlab-runner
+
+  sudo service docker restart
+
+  Регистрация runner
+  sudo gitlab-runner register
+  вводим информацию со страницы gitlab->settings->CI/CD->Runners
+  <code>Enter the GitLab instance URL (for example, https://gitlab.com/):</code>
+	<b>https://gitlab.com/</b>
+  <code>Enter the registration token:</code>
+	<b>V-2jupcHqgh7ca4Jp3Ui</b>
+  <code>Enter a description for the runner:</code>
+	[ip-172-31-24-73]: - <b>пусто</b>
+  <code>Enter tags for the runner (comma-separated):</code>
+	<b>local</b> (указывается в .gitlab-ci.yml)
+ <code>Enter an executor: docker-ssh, parallels, shell, virtualbox, docker+machine, kubernetes, docker, ssh, docker-ssh+machine, custom:</code>
+    <b>shell</b>
+ в результате
+ Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded! 
+ запуск 
+ <code>sudo gitlab-runner start</code>
+</pre>
+<br><b>разворачивание на docker-hub</b><br>
+<pre>
+docker login
+
+docker build -t alekssultanov/api_ip app
+docker push alekssultanov/api_ip
+
+docker build -t alekssultanov/nginx nginx
+docker push alekssultanov/nginx
+
+touch docker-compose.yml
+docker stack deploy -c docker-compose.yml web
+docker stack services web
+</pre>
+
+<br><b>Скрипт для создания docker автоматом при настройки инстанции</b><br>
+<pre>
+
+#!/bin/bash
+# Install docker
+apt-get update
+apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+apt-get update
+apt-get install -y docker-ce docker-ce-cli containerd.io
+groupadd docker
+usermod -aG docker ubuntu
+newgrp docker
+#docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+</pre>
+
+  </body>
+</html>

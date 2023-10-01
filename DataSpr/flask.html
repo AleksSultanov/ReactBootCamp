@@ -1,0 +1,32 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <body> 
+<title> Шпаргалка по flask  </title>
+<p> Запуск в коде </p>
+<pre>
+  if __name__ == "__main__":
+      app.run()
+
+	  
+     app.run(host='0.0.0.0') #-  приложение начнет прослушивать все общедоступные IPs.Запуск с локальным ip
+     app.run(host='0.0.0.0', port=4000) #- можете указать любой конкретный порт, на котором будет работать ваше приложение, скажем 4000 (порт по умолчанию-5000)
+</pre>
+
+<p> Запуск из коммандной строки </p>
+<pre> 
+  flask run 
+  flask run --host=0.0.0.0 
+</pre>
+
+<p> Включить режим debug </p>
+<pre> 
+  # ubuntu
+  export FLASK_ENV=development
+  # win
+  set FLASK_ENV=development
+  # win powershell
+  $env:FLASK_ENV = "development"
+</pre>
+
+  </body>
+</html>
