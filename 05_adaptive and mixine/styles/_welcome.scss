@@ -1,0 +1,91 @@
+.welcome-section {
+  position: relative;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 28px;
+
+    font-size: 80px;
+    line-height: 88px;
+
+    @media screen and (max-width: $xl) {
+      font-size: 52px;
+      line-height: 66px;
+      padding-left: 64px;
+      padding-right: 64px;
+
+      br {
+        display: none;
+      }
+    }
+
+    @include md-max {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 1580px;
+  }
+}
+
+.welcome-section__subtitle {
+  margin-bottom: 86px;
+
+  font-size: 20px;
+  line-height: 30px;
+
+  @media screen and (max-width: $xl) {
+    padding-left: 64px;
+    padding-right: 64px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include md-max {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.welcome-section__links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+
+  @media screen and (max-width: $xl) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 56px;
+  }
+}
+
+.welcome-section__link {
+}
+
+.welcome-section__link:first-child {
+  margin-right: 36px;
+
+  @media screen and (max-width: $xl) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.welcome-section__gradient {
+  position: absolute;
+  width: 100%;
+  height: 550px;
+  left: 0;
+  bottom: 0;
+
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0e0e0e 66.15%);
+
+  @media screen and (max-width: $xl) {
+    height: 328px;
+  }
+}

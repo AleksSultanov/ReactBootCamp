@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Макет 1</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <img class="logo" src="./images/logo.svg" alt="Логотип" />
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#" class="header__link"> Home </a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link"> Product </a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link"> About </a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="flex">
+          <button class="header__login-button button button--small">
+            Login
+          </button>
+          <button class="header__mobile-button">
+            <img
+              class="header__mobile-icon"
+              src="./images/mobile-menu-icon.svg"
+              alt="Иконка мобильного меню"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="welcome-section">
+        <h1 class="welcome-section__title">
+          Work at the speed <br />
+          of thought
+        </h1>
+        <p class="welcome-section__subtitle">
+          Most calendars are designed for teams. Slate is designed for <br />
+          freelancers who want a simple way to plan their schedule.
+        </p>
+        <div class="welcome-section__links">
+          <a href="#" class="welcome-section__link button button--large">
+            Try for free
+          </a>
+          <a href="#" class="welcome-section__link button button--large">
+            Learn more
+          </a>
+        </div>
+        <img
+          src="./images/screens.png"
+          alt="Графики"
+          class="welcome-section__img"
+        />
+        <div class="welcome-section__gradient" />
+      </section>
+      <section class="features-section">
+        <h2 class="features-section__title section__title">features</h2>
+        <p class="features-section__subtitle section__subtitle">
+          Most calendars are designed for teams. Slate is designed for <br />
+          freelancers who want a simple way to plan their schedule.
+        </p>
+        <div class="flex justify-center">
+          <div class="features-section__content">
+            <div class="features-section__images">
+              <img
+                src="./images/panel.png"
+                alt="Панель инструментов"
+                class="features-section__panel-image"
+              />
+              <img
+                src="./images/panel.png"
+                alt="График"
+                class="features-section__graphic-image"
+              />
+            </div>
+            <ul class="features-section__list">
+              <li class="features-section__list-item">
+                <h3 class="features-section__list-title">
+                  <div class="flex align-center">
+                    <svg
+                      width="26"
+                      height="24"
+                      viewBox="0 0 26 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.64636 13.6089L11.4197 9.83554L3.16636 1.59554C2.52636 0.955542 1.41969 1.12888 1.01969 1.95554C0.073024 3.94221 0.419691 6.38221 2.05969 8.03554L7.64636 13.6089ZM16.6864 11.1955C18.7264 12.1422 21.593 11.4755 23.713 9.35554C26.2597 6.80887 26.753 3.15554 24.793 1.19554C22.8464 -0.751124 19.193 -0.271124 16.633 2.27554C14.513 4.39554 13.8464 7.26221 14.793 9.30221L2.71302 21.3822C2.46372 21.6315 2.32366 21.9696 2.32366 22.3222C2.32366 22.6748 2.46372 23.0129 2.71302 23.2622C2.96233 23.5115 3.30046 23.6516 3.65302 23.6516C4.00559 23.6516 4.34372 23.5115 4.59302 23.2622L12.8464 15.0355L21.0864 23.2755C21.2098 23.399 21.3563 23.4969 21.5176 23.5637C21.6789 23.6305 21.8518 23.6649 22.0264 23.6649C22.2009 23.6649 22.3738 23.6305 22.5351 23.5637C22.6964 23.4969 22.8429 23.399 22.9664 23.2755C23.0898 23.1521 23.1877 23.0055 23.2545 22.8443C23.3213 22.683 23.3557 22.5101 23.3557 22.3355C23.3557 22.161 23.3213 21.9881 23.2545 21.8268C23.1877 21.6655 23.0898 21.519 22.9664 21.3955L14.7264 13.1555L16.6864 11.1955Z"
+                        fill="#02E4C0"
+                      />
+                    </svg>
+                    <span
+                      >A single source <br />
+                      of truth</span
+                    >
+                  </div>
+                </h3>
+                <p class="features-section__list-text">
+                  When you add work to your Slate calendar we automatically
+                  calculate useful insights
+                </p>
+              </li>
+              <li class="features-section__list-item">
+                <h3 class="features-section__list-title">
+                  <div class="flex align-center">
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5495 13.395C14.0285 15.855 13.811 18.75 12.042 19.92C10.273 21.06 7.634 19.995 6.1405 17.535C4.6615 15.075 4.8935 12.15 6.6625 11.01C8.4315 9.87 11.0705 10.935 12.5495 13.395ZM15 23.625C17.9 23.625 18.625 22.5 18.625 22.5C18.625 22.5 17.9 25.5 15 25.5C12.1 25.5 11.375 22.545 11.375 22.5C11.375 22.5 12.1 23.625 15 23.625ZM23.3375 11.01C25.1065 12.15 25.3385 15.075 23.8595 17.535C22.366 19.995 19.727 21.06 17.958 19.92C16.189 18.75 15.9715 15.855 17.4505 13.395C18.9295 10.935 21.5685 9.87 23.3375 11.01ZM15 27C18.625 27 26.6 19.29 26.6 13.5C26.6 7.71 21.3945 3 15 3C8.6055 3 3.4 7.71 3.4 13.5C3.4 19.29 11.375 27 15 27ZM15 0C22.975 0 29.5 6.06 29.5 13.5C29.5 19.62 21.264 30 15 30C8.736 30 0.5 19.62 0.5 13.5C0.5 6.06 7.025 0 15 0Z"
+                        fill="#02E4C0"
+                      />
+                    </svg>
+                    <span
+                      >A single source <br />
+                      of truth</span
+                    >
+                  </div>
+                </h3>
+                <p class="features-section__list-text">
+                  When you add work to your Slate calendar we automatically
+                  calculate useful insights
+                </p>
+              </li>
+              <li class="features-section__list-item">
+                <h3 class="features-section__list-title">
+                  <div class="flex align-center">
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5495 13.395C14.0285 15.855 13.811 18.75 12.042 19.92C10.273 21.06 7.634 19.995 6.1405 17.535C4.6615 15.075 4.8935 12.15 6.6625 11.01C8.4315 9.87 11.0705 10.935 12.5495 13.395ZM15 23.625C17.9 23.625 18.625 22.5 18.625 22.5C18.625 22.5 17.9 25.5 15 25.5C12.1 25.5 11.375 22.545 11.375 22.5C11.375 22.5 12.1 23.625 15 23.625ZM23.3375 11.01C25.1065 12.15 25.3385 15.075 23.8595 17.535C22.366 19.995 19.727 21.06 17.958 19.92C16.189 18.75 15.9715 15.855 17.4505 13.395C18.9295 10.935 21.5685 9.87 23.3375 11.01ZM15 27C18.625 27 26.6 19.29 26.6 13.5C26.6 7.71 21.3945 3 15 3C8.6055 3 3.4 7.71 3.4 13.5C3.4 19.29 11.375 27 15 27ZM15 0C22.975 0 29.5 6.06 29.5 13.5C29.5 19.62 21.264 30 15 30C8.736 30 0.5 19.62 0.5 13.5C0.5 6.06 7.025 0 15 0Z"
+                        fill="#02E4C0"
+                      />
+                    </svg>
+                    <span
+                      >A single source <br />
+                      of truth</span
+                    >
+                  </div>
+                </h3>
+                <p class="features-section__list-text">
+                  When you add work to your Slate calendar we automatically
+                  calculate useful insights
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="contents-section">
+        <h2 class="contents-section__title section__title text-center">
+          Contents
+        </h2>
+        <p class="contents-section__subtitle section__subtitle text-center">
+          We focus on ergonomics and meeting you where you work. <br />
+          It's only a keystroke away.
+        </p>
+        <div class="contents-section__cards">
+          <div class="content-section__card">
+            <h3 class="contents-section__card-title">Work</h3>
+            <p class="contents-section__card-subtitle">
+              Ever wondered if you're too reliant <br />
+              on a client for work? Slate helps <br />
+              you identify .
+            </p>
+            <a href="#" class="contents-section__link button button--large">
+              Sign Up
+            </a>
+            <img
+              src="./images/macbook.png"
+              alt="Ноутбук"
+              class="contents-section__card-image"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
