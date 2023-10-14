@@ -1,0 +1,16 @@
+.button {
+  padding: 16px 40px;
+
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-red);
+  border-radius: 211px;
+  cursor: pointer;
+
+  &.large {
+    padding: 26px 64px;
+    font-size: 20px;
+  }
+}

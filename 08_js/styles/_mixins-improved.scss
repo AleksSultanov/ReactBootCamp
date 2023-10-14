@@ -1,0 +1,72 @@
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  xs: 0,
+  md: 768px,
+  lg: 1280px,
+  xl: 1441px,
+);
+
+// Container max-widths
+$container-max-widths: (
+  md: 1000px,
+  lg: 1200px,
+  xl: 1500px,
+);
+
+/// Mixin to manage responsive breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+/// Mixin to manage responsive breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: (map-get($breakpoints, $breakpoint) - 1)) {
+      @content;
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+/// Mixin to manage responsive breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-from-to($breakpoint-from, $breakpoint-to) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint-from) and
+    map_has_key($breakpoints, $breakpoint-to)
+  {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint-from)) and (max-width: (map_get($breakpoints, $breakpoint-to) - 1)) {
+      @content;
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint-from}` or `#{$breakpoint-to}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

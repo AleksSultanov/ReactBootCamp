@@ -1,0 +1,81 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 34px;
+  margin-bottom: 120px;
+
+  background-color: var(--bg-color);
+
+  @include xl-max {
+    display: block;
+    padding-left: 34px;
+    padding-right: 16px;
+  }
+
+  @include xl-min {
+    color: red;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $xl) {
+      justify-content: space-between;
+    }
+  }
+
+  .logo {
+    margin-right: 136px;
+
+    @media screen and (max-width: $xl) {
+      margin-right: 0;
+    }
+  }
+
+  &__nav {
+    margin-right: 174px;
+
+    @media screen and (max-width: $xl) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    padding: 10px;
+  }
+
+  &__mobile-button {
+    display: none;
+    margin-left: 15px;
+    background-color: inherit;
+
+    @media screen and (max-width: $xl) {
+      display: block;
+    }
+  }
+
+  &__login-button {
+    @include md-max {
+      display: none;
+    }
+  }
+  .mobile-menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}

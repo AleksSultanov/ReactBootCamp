@@ -1,0 +1,43 @@
+.item {
+  padding: 10px;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+.grid {
+  display: grid;
+  padding: 20px;
+  grid-template-areas:
+    ". item1 item2 item3 item4 ."
+    "item5 item5 item6 item6 item7 item7";
+  grid-template-columns: 44px 1fr 1fr 1fr 1fr 44px;
+  grid-template-rows: 285px 285px;
+  gap: 44px 33px;
+
+  justify-content: center;
+
+  border: 1px solid white;
+}
+
+.item_1 {
+  grid-area: item1;
+}
+.item_2 {
+  grid-area: item2;
+}
+.item_3 {
+  grid-area: item3;
+}
+.item_4 {
+  grid-area: item4;
+}
+.item_5 {
+  grid-area: item5;
+}
+.item_6 {
+  grid-area: item6;
+}
+.item_7 {
+  grid-area: item7;
+}

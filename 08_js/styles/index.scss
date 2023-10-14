@@ -1,0 +1,95 @@
+@import "./mixins.scss";
+@import "./grid.scss";
+@import "./section.scss";
+
+@import "./features.scss";
+@import "./welcome.scss";
+@import "./contents.scss";
+@import "./header.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap");
+
+:root {
+  --bg-color: #181818;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* base styles */
+body {
+  margin: 0;
+
+  font-family: "Work Sans", sans-serif;
+  background-color: var(--bg-color);
+  color: white;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  font-size: 17px;
+  font-weight: 500;
+  font-family: "Work Sans", sans-serif;
+  outline: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  font-weight: 400;
+}
+/* ------------ */
+
+.button {
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.button:hover {
+  background-color: #4452fe;
+  border-color: #4452fe;
+}
+
+.button--small {
+  padding: 14px 46px;
+}
+
+.button--large {
+  padding: 20px 40px;
+}
+
+.flex {
+  display: flex;
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
