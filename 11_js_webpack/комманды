@@ -1,0 +1,36 @@
+проверка версий
+  node -v 
+  npm -v
+
+инициализация проекта
+  npm init
+
+установка yarn
+  npm install -g yarn
+
+добавить пакет webpack
+  yarn add webpack -D
+  yarn add webpack       (с зависимостями от webpack. для разработки ставим с -D)
+
+  yarn add webpack-cli
+
+удалить пакет
+  yarn remove webpack
+
+установить плагин для подключения html
+  yarn add html-webpack-plugin -D
+
+установить пакеты для css
+  yarn add css-loader postcss-loader sass-loader sass -D
+  yarn add mini-css-extract-plugin -D
+
+установить webpack-dev-server  
+  yarn add webpack-dev-server -D
+
+билд package.json  
+  yarn build
+запуск сервера из  package.json   
+  yarn start
+
+
+
