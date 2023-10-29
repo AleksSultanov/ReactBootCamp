@@ -32,5 +32,8 @@
 запуск сервера из  package.json   
   yarn start
 
+полезные пакеты для установки 
+  win-node-env  
+
 
 
