@@ -1,0 +1,4 @@
+yarn create vite my-vue-app --template vue
+yarn create vite my-react-app --template react
+
+yarn add vite
