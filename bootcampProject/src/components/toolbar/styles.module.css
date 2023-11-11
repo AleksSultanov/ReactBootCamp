@@ -1,0 +1,51 @@
+.bar {
+  padding: 20px;
+  width: 100%;
+  max-width: 330px;
+  background-color: #f9f6f4;
+  border-radius: 20px;
+  color: black;
+  text-align: left;
+}
+
+.card.active {
+  background-color: #61ca85;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin-bottom: 12px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  color: #0c1938;
+}
+
+.description {
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.tag {
+  padding: 4px 12px;
+  border-radius: 47px;
+  background-color: #61ca85;
+  color: white;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.likeIcon.active path {
+  fill: #403d44;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
