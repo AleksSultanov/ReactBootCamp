@@ -16,13 +16,21 @@
           <i>(где my-react-app это имя проекта)</i>
         yarn
           <i>(установка пакетов)</i>
+        yarn add gh-pages --save-dev  
+           <i>(для деплоя на git)</i>
+            в файле package.json
+                добавляем где name и private
+                "homepage": "https://alekssultanov.github.io/<название проекта на git>",
+                добавляем в scripts
+                "predeploy": "npm run build",
+                "deploy": "gh-pages -d dist",  
+                перед "build"
+            в файле vite.config.js 
+            base: "/<название проекта на git>/",
+
+
         yarn dev
           <i>(Запуск)</i>
-    </pre>
-    <p>Создание нового проекта React</p>
-    <pre>
-        yarn create vite my-vue-app --template vue
-        yarn create vite my-react-app --template react
     </pre>
     <p>Установка проекта по готовым файлам/p>
     <pre>
