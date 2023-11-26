@@ -1,0 +1,29 @@
+.field {
+  width: 50%;
+  margin-bottom: 24px;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.field.fullWidth {
+  width: 100%;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #868b95;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: black;
+  outline: none;
+  border: 2px solid #06509e;
+  border-radius: 6px;
+}
