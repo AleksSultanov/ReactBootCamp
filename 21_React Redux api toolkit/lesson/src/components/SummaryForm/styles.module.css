@@ -1,0 +1,14 @@
+.form {
+  width: 100%;
+  max-width: 784px;
+  padding: 20px 30px;
+  background-color: white;
+  color: #06509e;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 300;
+  text-align: left;
+}
