@@ -1,0 +1,7 @@
+.selected {
+  color: #369;
+}
+
+.item {
+  cursor: pointer;
+}
